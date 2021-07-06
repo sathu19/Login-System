@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<h4><a href="logout.php">Logout</a></h4>
+</html>
+<?php
+$con = mysqli_connect('localhost', 'root', '','credentials');
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$result = mysqli_query($con,"SELECT username,type FROM login");
+
+echo "<table border='1'>
+<tr>
+<th>Username</th>
+<th>Type</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result))
+{
+echo "<tr>";
+echo "<td>" . $row['username'] . "</td>";
+echo "<td>" . $row['type'] . "</td>";
+echo "</tr>";
+}
+echo "</table>";
+
+mysqli_close($con);
+?>
