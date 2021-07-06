@@ -1,5 +1,5 @@
 # Login-System
-Login system created by Satkkeerthi Sriram as part of the initial assignment using XAMPP (for Apache and MySQL server) and PHP.
+Login system created as part of the initial assignment using XAMPP (for Apache and MySQL server) and PHP.
 
 # How to run
 1. Download XAMPP
